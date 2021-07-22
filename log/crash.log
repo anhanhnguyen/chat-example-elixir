@@ -1,0 +1,523 @@
+2021-07-22 13:36:43 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.302.0>
+    registered_name: []
+    exception exit: {{bad_return,{{'Elixir.ChatExampleElixir.Sup',start,[normal,[]]},{'EXIT',{undef,[{'Elixir.ChatExampleElixir.Sup',start,[normal,[]],[]},{application_master,start_it_old,4,[{file,"application_master.erl"},{line,277}]}]}}}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.301.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.303.0>,normal}]
+    links: [<0.301.0>,<0.44.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 376
+    stack_size: 28
+    reductions: 224
+  neighbours:
+2021-07-22 13:52:55 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.ChatExampleElixir.Sup'}
+     Context:    start_error
+     Reason:     {undef,[{'Elixir.Connect',connect,[],[]},{'Elixir.ChatExampleElixir.Writer',init,1,[{file,"lib/chat_example_elixir/Writer.ex"},{line,10}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+     Offender:   [{pid,undefined},{id,'Elixir.ChatExampleElixir.Writer'},{mfargs,{'Elixir.ChatExampleElixir.Writer',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2021-07-22 13:52:55 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.286.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,'Elixir.ChatExampleElixir.Writer',{undef,[{'Elixir.Connect',connect,[],[]},{'Elixir.ChatExampleElixir.Writer',init,1,[{file,"lib/chat_example_elixir/Writer.ex"},{line,10}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}}},{'Elixir.ChatExampleElixir',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.285.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.287.0>,normal}]
+    links: [<0.285.0>,<0.44.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 28
+    reductions: 227
+  neighbours:
+2021-07-22 13:53:14 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.ChatExampleElixir.Sup'}
+     Context:    start_error
+     Reason:     {undef,[{'Elixir.Connect',connect,[],[]},{'Elixir.ChatExampleElixir.Writer',init,1,[{file,"lib/chat_example_elixir/Writer.ex"},{line,12}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+     Offender:   [{pid,undefined},{id,'Elixir.ChatExampleElixir.Writer'},{mfargs,{'Elixir.ChatExampleElixir.Writer',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2021-07-22 13:53:14 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.279.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,'Elixir.ChatExampleElixir.Writer',{undef,[{'Elixir.Connect',connect,[],[]},{'Elixir.ChatExampleElixir.Writer',init,1,[{file,"lib/chat_example_elixir/Writer.ex"},{line,12}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}}},{'Elixir.ChatExampleElixir',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.278.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.280.0>,normal}]
+    links: [<0.278.0>,<0.44.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 28
+    reductions: 223
+  neighbours:
+2021-07-22 13:53:32 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.ChatExampleElixir.Sup'}
+     Context:    start_error
+     Reason:     {undef,[{'Elixir.Connect',connect,[],[]},{'Elixir.ChatExampleElixir.Writer',init,1,[{file,"lib/chat_example_elixir/Writer.ex"},{line,12}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+     Offender:   [{pid,undefined},{id,'Elixir.ChatExampleElixir.Writer'},{mfargs,{'Elixir.ChatExampleElixir.Writer',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2021-07-22 13:53:32 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.279.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,'Elixir.ChatExampleElixir.Writer',{undef,[{'Elixir.Connect',connect,[],[]},{'Elixir.ChatExampleElixir.Writer',init,1,[{file,"lib/chat_example_elixir/Writer.ex"},{line,12}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}}},{'Elixir.ChatExampleElixir',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.278.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.280.0>,normal}]
+    links: [<0.278.0>,<0.44.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 28
+    reductions: 227
+  neighbours:
+2021-07-22 13:54:41 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.ChatExampleElixir.Sup'}
+     Context:    start_error
+     Reason:     {undef,[{'Elixir.Connection',open,[[{host,<<>>},{port,5672},{heartbeat,60},{name,<<"lajos">>},{username,<<"testuser">>},{password,<<"7HDpJ23ntECiR6bx">>}]],[]},{'Elixir.ChatExampleElixir.Writer',init,1,[{file,"lib/chat_example_elixir/Writer.ex"},{line,12}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+     Offender:   [{pid,undefined},{id,'Elixir.ChatExampleElixir.Writer'},{mfargs,{'Elixir.ChatExampleElixir.Writer',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2021-07-22 13:54:41 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.287.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,'Elixir.ChatExampleElixir.Writer',{undef,[{'Elixir.Connection',open,[[{host,<<>>},{port,5672},{heartbeat,60},{name,<<"lajos">>},{username,<<"testuser">>},{password,<<"7HDpJ23ntECiR6bx">>}]],[]},{'Elixir.ChatExampleElixir.Writer',init,1,[{file,"lib/chat_example_elixir/Writer.ex"},{line,12}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}}},{'Elixir.ChatExampleElixir',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.286.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.288.0>,normal}]
+    links: [<0.286.0>,<0.44.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 28
+    reductions: 226
+  neighbours:
+2021-07-22 13:54:52 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.ChatExampleElixir.Sup'}
+     Context:    start_error
+     Reason:     {{badmatch,{error,unknown_host}},[{'Elixir.ChatExampleElixir.Writer',init,1,[{file,"lib/chat_example_elixir/Writer.ex"},{line,12}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+     Offender:   [{pid,undefined},{id,'Elixir.ChatExampleElixir.Writer'},{mfargs,{'Elixir.ChatExampleElixir.Writer',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2021-07-22 14:07:27 =ERROR REPORT====
+** Generic server 'Elixir.ChatExampleElixir.Writer' terminating 
+** Last message in was {write_common,<<"test">>}
+** When Server state == #{channel => #{'__struct__' => 'Elixir.AMQP.Channel',conn => #{'__struct__' => 'Elixir.AMQP.Connection',pid => <0.285.0>},custom_consumer => {'Elixir.AMQP.SelectiveConsumer',<0.282.0>},pid => <0.296.0>},connection => #{'__struct__' => 'Elixir.AMQP.Connection',pid => <0.285.0>}}
+** Reason for termination ==
+** {{noproc,{gen_server,call,[<0.296.0>,{call,{'basic.publish',0,<<"common-room">>,<<>>,false,false},{amqp_msg,{'P_basic',undefined,undefined,[{<<"chat-username">>,longstr,<<"lajos">>}],1,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined},<<"test">>},<0.282.0>},60000]}},[{gen_server,call,3,[{file,"gen_server.erl"},{line,246}]},{'Elixir.AMQP.Basic',publish,5,[{file,"lib/amqp/basic.ex"},{line,105}]},{'Elixir.ChatExampleElixir.Writer',handle_call,3,[{file,"lib/chat_example_elixir/Writer.ex"},{line,34}]},{gen_server,try_handle_call,4,[{file,"gen_server.erl"},{line,706}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,735}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+** Client <0.298.0> stacktrace
+** [{gen,do_call,4,[{file,"gen.erl"},{line,208}]},{'Elixir.GenServer',call,3,[{file,"lib/gen_server.ex"},{line,1024}]},{erl_eval,do_apply,6,[{file,"erl_eval.erl"},{line,680}]},{elixir,recur_eval,3,[{file,"src/elixir.erl"},{line,280}]},{elixir,eval_forms,3,[{file,"src/elixir.erl"},{line,265}]},{'Elixir.IEx.Evaluator',handle_eval,5,[{file,"lib/iex/evaluator.ex"},{line,261}]},{'Elixir.IEx.Evaluator',do_eval,3,[{file,"lib/iex/evaluator.ex"},{line,242}]},{'Elixir.IEx.Evaluator',eval,3,[{file,"lib/iex/evaluator.ex"},{line,220}]}]
+2021-07-22 14:07:27 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.ChatExampleElixir.Writer:init/1
+    pid: <0.282.0>
+    registered_name: 'Elixir.ChatExampleElixir.Writer'
+    exception exit: {{noproc,{gen_server,call,[<0.296.0>,{call,{'basic.publish',0,<<"common-room">>,<<>>,false,false},{amqp_msg,{'P_basic',undefined,undefined,[{<<"chat-username">>,longstr,<<"lajos">>}],1,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined},<<"test">>},<0.282.0>},60000]}},[{gen_server,call,3,[{file,"gen_server.erl"},{line,246}]},{'Elixir.AMQP.Basic',publish,5,[{file,"lib/amqp/basic.ex"},{line,105}]},{'Elixir.ChatExampleElixir.Writer',handle_call,3,[{file,"lib/chat_example_elixir/Writer.ex"},{line,34}]},{gen_server,try_handle_call,4,[{file,"gen_server.erl"},{line,706}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,735}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: ['Elixir.ChatExampleElixir.Sup',<0.280.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.281.0>]
+    dictionary: [{gen_server_call_timeout,60000}]
+    trap_exit: false
+    status: running
+    heap_size: 10958
+    stack_size: 28
+    reductions: 11494
+  neighbours:
+2021-07-22 14:07:27 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.ChatExampleElixir.Sup'}
+     Context:    child_terminated
+     Reason:     {noproc,{gen_server,call,[<0.296.0>,{call,{'basic.publish',0,<<"common-room">>,<<>>,false,false},{amqp_msg,{'P_basic',undefined,undefined,[{<<"chat-username">>,longstr,<<"lajos">>}],1,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined},<<"test">>},<0.282.0>},60000]}}
+     Offender:   [{pid,<0.282.0>},{id,'Elixir.ChatExampleElixir.Writer'},{mfargs,{'Elixir.ChatExampleElixir.Writer',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2021-07-22 14:08:48 =ERROR REPORT====
+** Generic server 'Elixir.ChatExampleElixir.Writer' terminating 
+** Last message in was {write_common,<<"test">>}
+** When Server state == #{channel => #{'__struct__' => 'Elixir.AMQP.Channel',conn => #{'__struct__' => 'Elixir.AMQP.Connection',pid => <0.285.0>},custom_consumer => {'Elixir.AMQP.SelectiveConsumer',<0.282.0>},pid => <0.296.0>},connection => #{'__struct__' => 'Elixir.AMQP.Connection',pid => <0.285.0>}}
+** Reason for termination ==
+** {{noproc,{gen_server,call,[<0.296.0>,{call,{'basic.publish',0,<<"common-room">>,<<>>,false,false},{amqp_msg,{'P_basic',undefined,undefined,[{<<"chat-username">>,longstr,<<"lajos">>}],1,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined},<<"test">>},<0.282.0>},60000]}},[{gen_server,call,3,[{file,"gen_server.erl"},{line,246}]},{'Elixir.AMQP.Basic',publish,5,[{file,"lib/amqp/basic.ex"},{line,105}]},{'Elixir.ChatExampleElixir.Writer',handle_call,3,[{file,"lib/chat_example_elixir/Writer.ex"},{line,35}]},{gen_server,try_handle_call,4,[{file,"gen_server.erl"},{line,706}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,735}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+** Client <0.298.0> stacktrace
+** [{gen,do_call,4,[{file,"gen.erl"},{line,208}]},{'Elixir.GenServer',call,3,[{file,"lib/gen_server.ex"},{line,1024}]},{erl_eval,do_apply,6,[{file,"erl_eval.erl"},{line,680}]},{elixir,recur_eval,3,[{file,"src/elixir.erl"},{line,280}]},{elixir,eval_forms,3,[{file,"src/elixir.erl"},{line,265}]},{'Elixir.IEx.Evaluator',handle_eval,5,[{file,"lib/iex/evaluator.ex"},{line,261}]},{'Elixir.IEx.Evaluator',do_eval,3,[{file,"lib/iex/evaluator.ex"},{line,242}]},{'Elixir.IEx.Evaluator',eval,3,[{file,"lib/iex/evaluator.ex"},{line,220}]}]
+2021-07-22 14:08:48 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.ChatExampleElixir.Writer:init/1
+    pid: <0.282.0>
+    registered_name: 'Elixir.ChatExampleElixir.Writer'
+    exception exit: {{noproc,{gen_server,call,[<0.296.0>,{call,{'basic.publish',0,<<"common-room">>,<<>>,false,false},{amqp_msg,{'P_basic',undefined,undefined,[{<<"chat-username">>,longstr,<<"lajos">>}],1,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined},<<"test">>},<0.282.0>},60000]}},[{gen_server,call,3,[{file,"gen_server.erl"},{line,246}]},{'Elixir.AMQP.Basic',publish,5,[{file,"lib/amqp/basic.ex"},{line,105}]},{'Elixir.ChatExampleElixir.Writer',handle_call,3,[{file,"lib/chat_example_elixir/Writer.ex"},{line,35}]},{gen_server,try_handle_call,4,[{file,"gen_server.erl"},{line,706}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,735}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: ['Elixir.ChatExampleElixir.Sup',<0.280.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.281.0>]
+    dictionary: [{gen_server_call_timeout,60000}]
+    trap_exit: false
+    status: running
+    heap_size: 10958
+    stack_size: 28
+    reductions: 11632
+  neighbours:
+2021-07-22 14:08:48 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.ChatExampleElixir.Sup'}
+     Context:    child_terminated
+     Reason:     {noproc,{gen_server,call,[<0.296.0>,{call,{'basic.publish',0,<<"common-room">>,<<>>,false,false},{amqp_msg,{'P_basic',undefined,undefined,[{<<"chat-username">>,longstr,<<"lajos">>}],1,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined},<<"test">>},<0.282.0>},60000]}}
+     Offender:   [{pid,<0.282.0>},{id,'Elixir.ChatExampleElixir.Writer'},{mfargs,{'Elixir.ChatExampleElixir.Writer',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2021-07-22 14:10:53 =ERROR REPORT====
+** Generic server 'Elixir.ChatExampleElixir.Writer' terminating 
+** Last message in was {write_common,<<"test">>}
+** When Server state == #{channel => #{'__struct__' => 'Elixir.AMQP.Channel',conn => #{'__struct__' => 'Elixir.AMQP.Connection',pid => <0.316.0>},custom_consumer => {'Elixir.AMQP.SelectiveConsumer',<0.313.0>},pid => <0.327.0>},connection => #{'__struct__' => 'Elixir.AMQP.Connection',pid => <0.316.0>}}
+** Reason for termination ==
+** {{noproc,{gen_server,call,[<0.327.0>,{call,{'basic.publish',0,<<"common-room">>,<<>>,false,false},{amqp_msg,{'P_basic',undefined,undefined,[{<<"chat-username">>,longstr,<<"lajos">>}],1,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined},<<"test">>},<0.313.0>},60000]}},[{gen_server,call,3,[{file,"gen_server.erl"},{line,246}]},{'Elixir.AMQP.Basic',publish,5,[{file,"lib/amqp/basic.ex"},{line,105}]},{'Elixir.ChatExampleElixir.Writer',handle_call,3,[{file,"lib/chat_example_elixir/Writer.ex"},{line,35}]},{gen_server,try_handle_call,4,[{file,"gen_server.erl"},{line,706}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,735}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+** Client <0.329.0> stacktrace
+** [{gen,do_call,4,[{file,"gen.erl"},{line,208}]},{'Elixir.GenServer',call,3,[{file,"lib/gen_server.ex"},{line,1024}]},{erl_eval,do_apply,6,[{file,"erl_eval.erl"},{line,680}]},{elixir,recur_eval,3,[{file,"src/elixir.erl"},{line,280}]},{elixir,eval_forms,3,[{file,"src/elixir.erl"},{line,265}]},{'Elixir.IEx.Evaluator',handle_eval,5,[{file,"lib/iex/evaluator.ex"},{line,261}]},{'Elixir.IEx.Evaluator',do_eval,3,[{file,"lib/iex/evaluator.ex"},{line,242}]},{'Elixir.IEx.Evaluator',eval,3,[{file,"lib/iex/evaluator.ex"},{line,220}]}]
+2021-07-22 14:10:53 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.ChatExampleElixir.Writer:init/1
+    pid: <0.313.0>
+    registered_name: 'Elixir.ChatExampleElixir.Writer'
+    exception exit: {{noproc,{gen_server,call,[<0.327.0>,{call,{'basic.publish',0,<<"common-room">>,<<>>,false,false},{amqp_msg,{'P_basic',undefined,undefined,[{<<"chat-username">>,longstr,<<"lajos">>}],1,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined},<<"test">>},<0.313.0>},60000]}},[{gen_server,call,3,[{file,"gen_server.erl"},{line,246}]},{'Elixir.AMQP.Basic',publish,5,[{file,"lib/amqp/basic.ex"},{line,105}]},{'Elixir.ChatExampleElixir.Writer',handle_call,3,[{file,"lib/chat_example_elixir/Writer.ex"},{line,35}]},{gen_server,try_handle_call,4,[{file,"gen_server.erl"},{line,706}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,735}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: ['Elixir.ChatExampleElixir.Sup',<0.311.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.312.0>]
+    dictionary: [{gen_server_call_timeout,60000}]
+    trap_exit: false
+    status: running
+    heap_size: 10958
+    stack_size: 28
+    reductions: 11874
+  neighbours:
+2021-07-22 14:10:53 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.ChatExampleElixir.Sup'}
+     Context:    child_terminated
+     Reason:     {noproc,{gen_server,call,[<0.327.0>,{call,{'basic.publish',0,<<"common-room">>,<<>>,false,false},{amqp_msg,{'P_basic',undefined,undefined,[{<<"chat-username">>,longstr,<<"lajos">>}],1,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined},<<"test">>},<0.313.0>},60000]}}
+     Offender:   [{pid,<0.313.0>},{id,'Elixir.ChatExampleElixir.Writer'},{mfargs,{'Elixir.ChatExampleElixir.Writer',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2021-07-22 14:12:29 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.ChatExampleElixir.Sup'}
+     Context:    start_error
+     Reason:     {badarg,[{erlang,monitor,[process,#{'__struct__' => 'Elixir.AMQP.Channel',conn => #{'__struct__' => 'Elixir.AMQP.Connection',pid => <0.285.0>},custom_consumer => {'Elixir.AMQP.SelectiveConsumer',<0.282.0>},pid => <0.296.0>}],[]},{'Elixir.ChatExampleElixir.Writer',init,1,[{file,"lib/chat_example_elixir/Writer.ex"},{line,17}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+     Offender:   [{pid,undefined},{id,'Elixir.ChatExampleElixir.Writer'},{mfargs,{'Elixir.ChatExampleElixir.Writer',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2021-07-22 14:12:29 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.279.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,'Elixir.ChatExampleElixir.Writer',{badarg,[{erlang,monitor,[process,#{'__struct__' => 'Elixir.AMQP.Channel',conn => #{'__struct__' => 'Elixir.AMQP.Connection',pid => <0.285.0>},custom_consumer => {'Elixir.AMQP.SelectiveConsumer',<0.282.0>},pid => <0.296.0>}],[]},{'Elixir.ChatExampleElixir.Writer',init,1,[{file,"lib/chat_example_elixir/Writer.ex"},{line,17}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}}},{'Elixir.ChatExampleElixir',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.278.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.280.0>,normal}]
+    links: [<0.278.0>,<0.44.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 28
+    reductions: 232
+  neighbours:
+2021-07-22 14:12:54 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.ChatExampleElixir.Sup'}
+     Context:    start_error
+     Reason:     {{badmatch,#Ref<0.155183419.3291742210.238452>},[{'Elixir.ChatExampleElixir.Writer',init,1,[{file,"lib/chat_example_elixir/Writer.ex"},{line,17}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+     Offender:   [{pid,undefined},{id,'Elixir.ChatExampleElixir.Writer'},{mfargs,{'Elixir.ChatExampleElixir.Writer',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2021-07-22 14:12:54 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.279.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,'Elixir.ChatExampleElixir.Writer',{{badmatch,#Ref<0.155183419.3291742210.238452>},[{'Elixir.ChatExampleElixir.Writer',init,1,[{file,"lib/chat_example_elixir/Writer.ex"},{line,17}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}}},{'Elixir.ChatExampleElixir',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.278.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.280.0>,normal}]
+    links: [<0.278.0>,<0.44.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 28
+    reductions: 226
+  neighbours:
+2021-07-22 14:13:05 =ERROR REPORT====
+** Generic server 'Elixir.ChatExampleElixir.Writer' terminating 
+** Last message in was {'DOWN',#Ref<0.4182278590.1681391618.106330>,process,<0.296.0>,{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'common-room' in vhost '/'">>}}}
+** When Server state == #{channel => #{'__struct__' => 'Elixir.AMQP.Channel',conn => #{'__struct__' => 'Elixir.AMQP.Connection',pid => <0.285.0>},custom_consumer => {'Elixir.AMQP.SelectiveConsumer',<0.282.0>},pid => <0.296.0>},connection => #{'__struct__' => 'Elixir.AMQP.Connection',pid => <0.285.0>}}
+** Reason for termination ==
+** {#{'__exception__' => true,'__struct__' => 'Elixir.Protocol.UndefinedError',description => <<>>,protocol => 'Elixir.String.Chars',value => {'DOWN',#Ref<0.4182278590.1681391618.106330>,process,<0.296.0>,{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'common-room' in vhost '/'">>}}}},[{'Elixir.String.Chars','impl_for!',1,[{file,"lib/string/chars.ex"},{line,3}]},{'Elixir.String.Chars',to_string,1,[{file,"lib/string/chars.ex"},{line,22}]},{'Elixir.ChatExampleElixir.Writer',handle_info,2,[{file,"lib/chat_example_elixir/Writer.ex"},{line,52}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,680}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,756}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+2021-07-22 14:13:05 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.ChatExampleElixir.Writer:init/1
+    pid: <0.282.0>
+    registered_name: 'Elixir.ChatExampleElixir.Writer'
+    exception error: {#{'__exception__' => true,'__struct__' => 'Elixir.Protocol.UndefinedError',description => <<>>,protocol => 'Elixir.String.Chars',value => {'DOWN',#Ref<0.4182278590.1681391618.106330>,process,<0.296.0>,{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'common-room' in vhost '/'">>}}}},[{'Elixir.String.Chars','impl_for!',1,[{file,"lib/string/chars.ex"},{line,3}]},{'Elixir.String.Chars',to_string,1,[{file,"lib/string/chars.ex"},{line,22}]},{'Elixir.ChatExampleElixir.Writer',handle_info,2,[{file,"lib/chat_example_elixir/Writer.ex"},{line,52}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,680}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,756}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: ['Elixir.ChatExampleElixir.Sup',<0.280.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.281.0>]
+    dictionary: [{gen_server_call_timeout,60000}]
+    trap_exit: false
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 8715
+  neighbours:
+2021-07-22 14:13:05 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.ChatExampleElixir.Sup'}
+     Context:    child_terminated
+     Reason:     {#{'__exception__' => true,'__struct__' => 'Elixir.Protocol.UndefinedError',description => <<>>,protocol => 'Elixir.String.Chars',value => {'DOWN',#Ref<0.4182278590.1681391618.106330>,process,<0.296.0>,{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no exchange 'common-room' in vhost '/'">>}}}},[{'Elixir.String.Chars','impl_for!',1,[{file,"lib/string/chars.ex"},{line,3}]},{'Elixir.String.Chars',to_string,1,[{file,"lib/string/chars.ex"},{line,22}]},{'Elixir.ChatExampleElixir.Writer',handle_info,2,[{file,"lib/chat_example_elixir/Writer.ex"},{line,52}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,680}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,756}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+     Offender:   [{pid,<0.282.0>},{id,'Elixir.ChatExampleElixir.Writer'},{mfargs,{'Elixir.ChatExampleElixir.Writer',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2021-07-22 14:15:08 =ERROR REPORT====
+** Generic server 'Elixir.ChatExampleElixir.Writer' terminating 
+** Last message in was {write_common,<<"test">>}
+** When Server state == #{channel => #{'__struct__' => 'Elixir.AMQP.Channel',conn => #{'__struct__' => 'Elixir.AMQP.Connection',pid => <0.285.0>},custom_consumer => {'Elixir.AMQP.SelectiveConsumer',<0.282.0>},pid => <0.296.0>},connection => #{'__struct__' => 'Elixir.AMQP.Connection',pid => <0.285.0>}}
+** Reason for termination ==
+** {{noproc,{gen_server,call,[<0.296.0>,{call,{'basic.publish',0,<<"common-room">>,<<>>,false,false},{amqp_msg,{'P_basic',undefined,undefined,[{<<"chat-username">>,longstr,<<"lajos">>}],1,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined},<<"test">>},<0.282.0>},60000]}},[{gen_server,call,3,[{file,"gen_server.erl"},{line,246}]},{'Elixir.AMQP.Basic',publish,5,[{file,"lib/amqp/basic.ex"},{line,105}]},{'Elixir.ChatExampleElixir.Writer',handle_call,3,[{file,"lib/chat_example_elixir/Writer.ex"},{line,36}]},{gen_server,try_handle_call,4,[{file,"gen_server.erl"},{line,706}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,735}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+** Client <0.298.0> stacktrace
+** [{gen,do_call,4,[{file,"gen.erl"},{line,208}]},{'Elixir.GenServer',call,3,[{file,"lib/gen_server.ex"},{line,1024}]},{erl_eval,do_apply,6,[{file,"erl_eval.erl"},{line,680}]},{elixir,recur_eval,3,[{file,"src/elixir.erl"},{line,280}]},{elixir,eval_forms,3,[{file,"src/elixir.erl"},{line,265}]},{'Elixir.IEx.Evaluator',handle_eval,5,[{file,"lib/iex/evaluator.ex"},{line,261}]},{'Elixir.IEx.Evaluator',do_eval,3,[{file,"lib/iex/evaluator.ex"},{line,242}]},{'Elixir.IEx.Evaluator',eval,3,[{file,"lib/iex/evaluator.ex"},{line,220}]}]
+2021-07-22 14:15:08 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.ChatExampleElixir.Writer:init/1
+    pid: <0.282.0>
+    registered_name: 'Elixir.ChatExampleElixir.Writer'
+    exception exit: {{noproc,{gen_server,call,[<0.296.0>,{call,{'basic.publish',0,<<"common-room">>,<<>>,false,false},{amqp_msg,{'P_basic',undefined,undefined,[{<<"chat-username">>,longstr,<<"lajos">>}],1,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined},<<"test">>},<0.282.0>},60000]}},[{gen_server,call,3,[{file,"gen_server.erl"},{line,246}]},{'Elixir.AMQP.Basic',publish,5,[{file,"lib/amqp/basic.ex"},{line,105}]},{'Elixir.ChatExampleElixir.Writer',handle_call,3,[{file,"lib/chat_example_elixir/Writer.ex"},{line,36}]},{gen_server,try_handle_call,4,[{file,"gen_server.erl"},{line,706}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,735}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: ['Elixir.ChatExampleElixir.Sup',<0.280.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.281.0>]
+    dictionary: [{gen_server_call_timeout,60000}]
+    trap_exit: false
+    status: running
+    heap_size: 10958
+    stack_size: 28
+    reductions: 13506
+  neighbours:
+2021-07-22 14:15:08 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.ChatExampleElixir.Sup'}
+     Context:    child_terminated
+     Reason:     {noproc,{gen_server,call,[<0.296.0>,{call,{'basic.publish',0,<<"common-room">>,<<>>,false,false},{amqp_msg,{'P_basic',undefined,undefined,[{<<"chat-username">>,longstr,<<"lajos">>}],1,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined},<<"test">>},<0.282.0>},60000]}}
+     Offender:   [{pid,<0.282.0>},{id,'Elixir.ChatExampleElixir.Writer'},{mfargs,{'Elixir.ChatExampleElixir.Writer',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2021-07-22 14:28:24 =ERROR REPORT====
+** Generic server 'Elixir.ChatExampleElixir.Reader' terminating 
+** Last message in was {basic_consume_ok,#{consumer_tag => <<"amq.ctag-jdJLVdQM0XKGNNXpsMhACw">>}}
+** When Server state == #{channel => #{'__struct__' => 'Elixir.AMQP.Channel',conn => #{'__struct__' => 'Elixir.AMQP.Connection',pid => <0.301.0>},custom_consumer => {'Elixir.AMQP.SelectiveConsumer',<0.298.0>},pid => <0.310.0>},connection => #{'__struct__' => 'Elixir.AMQP.Connection',pid => <0.301.0>}}
+** Reason for termination ==
+** {bad_return_value,ok}
+2021-07-22 14:28:24 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.ChatExampleElixir.Reader:init/1
+    pid: <0.298.0>
+    registered_name: 'Elixir.ChatExampleElixir.Reader'
+    exception exit: {{bad_return_value,ok},[{gen_server,handle_common_reply,8,[{file,"gen_server.erl"},{line,800}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: ['Elixir.ChatExampleElixir.Sup',<0.280.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.281.0>]
+    dictionary: [{gen_server_call_timeout,60000}]
+    trap_exit: false
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 3736
+  neighbours:
+2021-07-22 14:28:24 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.ChatExampleElixir.Sup'}
+     Context:    child_terminated
+     Reason:     {bad_return_value,ok}
+     Offender:   [{pid,<0.298.0>},{id,'Elixir.ChatExampleElixir.Reader'},{mfargs,{'Elixir.ChatExampleElixir.Reader',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2021-07-22 14:28:24 =ERROR REPORT====
+** Generic server 'Elixir.ChatExampleElixir.Reader' terminating 
+** Last message in was {basic_consume_ok,#{consumer_tag => <<"amq.ctag-1Mn1ATGvfA_6mUlMaxWoAQ">>}}
+** When Server state == #{channel => #{'__struct__' => 'Elixir.AMQP.Channel',conn => #{'__struct__' => 'Elixir.AMQP.Connection',pid => <0.316.0>},custom_consumer => {'Elixir.AMQP.SelectiveConsumer',<0.313.0>},pid => <0.326.0>},connection => #{'__struct__' => 'Elixir.AMQP.Connection',pid => <0.316.0>}}
+** Reason for termination ==
+** {bad_return_value,ok}
+2021-07-22 14:28:24 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.ChatExampleElixir.Reader:init/1
+    pid: <0.313.0>
+    registered_name: 'Elixir.ChatExampleElixir.Reader'
+    exception exit: {{bad_return_value,ok},[{gen_server,handle_common_reply,8,[{file,"gen_server.erl"},{line,800}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: ['Elixir.ChatExampleElixir.Sup',<0.280.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.281.0>]
+    dictionary: [{gen_server_call_timeout,60000}]
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 28
+    reductions: 3636
+  neighbours:
+2021-07-22 14:28:24 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.ChatExampleElixir.Sup'}
+     Context:    child_terminated
+     Reason:     {bad_return_value,ok}
+     Offender:   [{pid,<0.313.0>},{id,'Elixir.ChatExampleElixir.Reader'},{mfargs,{'Elixir.ChatExampleElixir.Reader',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2021-07-22 14:28:24 =ERROR REPORT====
+** Generic server 'Elixir.ChatExampleElixir.Reader' terminating 
+** Last message in was {basic_consume_ok,#{consumer_tag => <<"amq.ctag-EC15QpMh-yqlXBxu19oz8Q">>}}
+** When Server state == #{channel => #{'__struct__' => 'Elixir.AMQP.Channel',conn => #{'__struct__' => 'Elixir.AMQP.Connection',pid => <0.331.0>},custom_consumer => {'Elixir.AMQP.SelectiveConsumer',<0.328.0>},pid => <0.340.0>},connection => #{'__struct__' => 'Elixir.AMQP.Connection',pid => <0.331.0>}}
+** Reason for termination ==
+** {bad_return_value,ok}
+2021-07-22 14:28:24 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.ChatExampleElixir.Reader:init/1
+    pid: <0.328.0>
+    registered_name: 'Elixir.ChatExampleElixir.Reader'
+    exception exit: {{bad_return_value,ok},[{gen_server,handle_common_reply,8,[{file,"gen_server.erl"},{line,800}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: ['Elixir.ChatExampleElixir.Sup',<0.280.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.281.0>]
+    dictionary: [{gen_server_call_timeout,60000}]
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 28
+    reductions: 3636
+  neighbours:
+2021-07-22 14:28:24 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.ChatExampleElixir.Sup'}
+     Context:    child_terminated
+     Reason:     {bad_return_value,ok}
+     Offender:   [{pid,<0.328.0>},{id,'Elixir.ChatExampleElixir.Reader'},{mfargs,{'Elixir.ChatExampleElixir.Reader',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2021-07-22 14:28:24 =ERROR REPORT====
+** Generic server 'Elixir.ChatExampleElixir.Reader' terminating 
+** Last message in was {basic_consume_ok,#{consumer_tag => <<"amq.ctag-pfenTVJbpzgL6JtuxnZDJA">>}}
+** When Server state == #{channel => #{'__struct__' => 'Elixir.AMQP.Channel',conn => #{'__struct__' => 'Elixir.AMQP.Connection',pid => <0.345.0>},custom_consumer => {'Elixir.AMQP.SelectiveConsumer',<0.342.0>},pid => <0.354.0>},connection => #{'__struct__' => 'Elixir.AMQP.Connection',pid => <0.345.0>}}
+** Reason for termination ==
+** {bad_return_value,ok}
+2021-07-22 14:28:24 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.ChatExampleElixir.Reader:init/1
+    pid: <0.342.0>
+    registered_name: 'Elixir.ChatExampleElixir.Reader'
+    exception exit: {{bad_return_value,ok},[{gen_server,handle_common_reply,8,[{file,"gen_server.erl"},{line,800}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: ['Elixir.ChatExampleElixir.Sup',<0.280.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.281.0>]
+    dictionary: [{gen_server_call_timeout,60000}]
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 28
+    reductions: 3636
+  neighbours:
+2021-07-22 14:28:24 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.ChatExampleElixir.Sup'}
+     Context:    child_terminated
+     Reason:     {bad_return_value,ok}
+     Offender:   [{pid,<0.342.0>},{id,'Elixir.ChatExampleElixir.Reader'},{mfargs,{'Elixir.ChatExampleElixir.Reader',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2021-07-22 14:28:24 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.ChatExampleElixir.Sup'}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.342.0>},{id,'Elixir.ChatExampleElixir.Reader'},{mfargs,{'Elixir.ChatExampleElixir.Reader',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2021-07-22 14:30:56 =ERROR REPORT====
+** Generic server 'Elixir.ChatExampleElixir.Reader' terminating 
+** Last message in was {basic_deliver,<<"test">>,#{app_id => undefined,cluster_id => undefined,consumer_tag => <<"amq.ctag-7Zeii9KhLSoAZMNDHxX9CA">>,content_encoding => undefined,content_type => undefined,correlation_id => undefined,delivery_tag => 1,exchange => <<"common-room">>,expiration => undefined,headers => [{<<"chat-username">>,longstr,<<"lajos">>},{<<"timestamp_in_ms">>,long,1626956934520}],message_id => undefined,persistent => false,priority => undefined,redelivered => true,reply_to => undefined,routing_key => <<>>,timestamp => 1626956934,type => undefined,user_id => undefined}}
+** When Server state == #{channel => #{'__struct__' => 'Elixir.AMQP.Channel',conn => #{'__struct__' => 'Elixir.AMQP.Connection',pid => <0.301.0>},custom_consumer => {'Elixir.AMQP.SelectiveConsumer',<0.298.0>},pid => <0.310.0>},connection => #{'__struct__' => 'Elixir.AMQP.Connection',pid => <0.301.0>}}
+** Reason for termination ==
+** {'module could not be loaded',[{'Elixir.Maps',get,[[{<<"chat-username">>,longstr,<<"lajos">>},{<<"timestamp_in_ms">>,long,1626956934520}],<<"chat-username">>,<<"UNDEFINED">>],[]},{'Elixir.ChatExampleElixir.Reader',handle_info,2,[{file,"lib/chat_example_elixir/Reader.ex"},{line,49}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,680}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,756}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+2021-07-22 14:30:56 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.ChatExampleElixir.Reader:init/1
+    pid: <0.298.0>
+    registered_name: 'Elixir.ChatExampleElixir.Reader'
+    exception error: {undef,[{'Elixir.Maps',get,[[{<<"chat-username">>,longstr,<<"lajos">>},{<<"timestamp_in_ms">>,long,1626956934520}],<<"chat-username">>,<<"UNDEFINED">>],[]},{'Elixir.ChatExampleElixir.Reader',handle_info,2,[{file,"lib/chat_example_elixir/Reader.ex"},{line,49}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,680}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,756}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: ['Elixir.ChatExampleElixir.Sup',<0.280.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.281.0>]
+    dictionary: [{gen_server_call_timeout,60000}]
+    trap_exit: false
+    status: running
+    heap_size: 4185
+    stack_size: 28
+    reductions: 10574
+  neighbours:
+2021-07-22 14:30:56 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.ChatExampleElixir.Sup'}
+     Context:    child_terminated
+     Reason:     {undef,[{'Elixir.Maps',get,[[{<<"chat-username">>,longstr,<<"lajos">>},{<<"timestamp_in_ms">>,long,1626956934520}],<<"chat-username">>,<<"UNDEFINED">>],[]},{'Elixir.ChatExampleElixir.Reader',handle_info,2,[{file,"lib/chat_example_elixir/Reader.ex"},{line,49}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,680}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,756}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+     Offender:   [{pid,<0.298.0>},{id,'Elixir.ChatExampleElixir.Reader'},{mfargs,{'Elixir.ChatExampleElixir.Reader',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2021-07-22 14:31:11 =ERROR REPORT====
+** Generic server 'Elixir.ChatExampleElixir.Reader' terminating 
+** Last message in was {basic_deliver,<<"test">>,#{app_id => undefined,cluster_id => undefined,consumer_tag => <<"amq.ctag-RIHNY9zEST8VDlcTMFUf6A">>,content_encoding => undefined,content_type => undefined,correlation_id => undefined,delivery_tag => 1,exchange => <<"common-room">>,expiration => undefined,headers => [{<<"chat-username">>,longstr,<<"lajos">>},{<<"timestamp_in_ms">>,long,1626956934520}],message_id => undefined,persistent => false,priority => undefined,redelivered => true,reply_to => undefined,routing_key => <<>>,timestamp => 1626956934,type => undefined,user_id => undefined}}
+** When Server state == #{channel => #{'__struct__' => 'Elixir.AMQP.Channel',conn => #{'__struct__' => 'Elixir.AMQP.Connection',pid => <0.301.0>},custom_consumer => {'Elixir.AMQP.SelectiveConsumer',<0.298.0>},pid => <0.310.0>},connection => #{'__struct__' => 'Elixir.AMQP.Connection',pid => <0.301.0>}}
+** Reason for termination ==
+** {{badmap,[{<<"chat-username">>,longstr,<<"lajos">>},{<<"timestamp_in_ms">>,long,1626956934520}]},[{'Elixir.Map',get,[[{<<"chat-username">>,longstr,<<"lajos">>},{<<"timestamp_in_ms">>,long,1626956934520}],<<"chat-username">>,<<"UNDEFINED">>],[{file,"lib/map.ex"},{line,469}]},{'Elixir.ChatExampleElixir.Reader',handle_info,2,[{file,"lib/chat_example_elixir/Reader.ex"},{line,49}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,680}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,756}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+2021-07-22 14:31:11 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.ChatExampleElixir.Reader:init/1
+    pid: <0.298.0>
+    registered_name: 'Elixir.ChatExampleElixir.Reader'
+    exception error: {{badmap,[{<<"chat-username">>,longstr,<<"lajos">>},{<<"timestamp_in_ms">>,long,1626956934520}]},[{'Elixir.Map',get,[[{<<"chat-username">>,longstr,<<"lajos">>},{<<"timestamp_in_ms">>,long,1626956934520}],<<"chat-username">>,<<"UNDEFINED">>],[{file,"lib/map.ex"},{line,469}]},{'Elixir.ChatExampleElixir.Reader',handle_info,2,[{file,"lib/chat_example_elixir/Reader.ex"},{line,49}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,680}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,756}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: ['Elixir.ChatExampleElixir.Sup',<0.280.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.281.0>]
+    dictionary: [{gen_server_call_timeout,60000}]
+    trap_exit: false
+    status: running
+    heap_size: 4185
+    stack_size: 28
+    reductions: 11044
+  neighbours:
+2021-07-22 14:31:11 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.ChatExampleElixir.Sup'}
+     Context:    child_terminated
+     Reason:     {{badmap,[{<<"chat-username">>,longstr,<<"lajos">>},{<<"timestamp_in_ms">>,long,1626956934520}]},[{'Elixir.Map',get,[[{<<"chat-username">>,longstr,<<"lajos">>},{<<"timestamp_in_ms">>,long,1626956934520}],<<"chat-username">>,<<"UNDEFINED">>],[{file,"lib/map.ex"},{line,469}]},{'Elixir.ChatExampleElixir.Reader',handle_info,2,[{file,"lib/chat_example_elixir/Reader.ex"},{line,49}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,680}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,756}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+     Offender:   [{pid,<0.298.0>},{id,'Elixir.ChatExampleElixir.Reader'},{mfargs,{'Elixir.ChatExampleElixir.Reader',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2021-07-22 14:32:53 =ERROR REPORT====
+** Generic server 'Elixir.ChatExampleElixir.Reader' terminating 
+** Last message in was {basic_deliver,<<"test">>,#{app_id => undefined,cluster_id => undefined,consumer_tag => <<"amq.ctag-O9InpPHd4iKbI5qI9X3yiQ">>,content_encoding => undefined,content_type => undefined,correlation_id => undefined,delivery_tag => 1,exchange => <<"common-room">>,expiration => undefined,headers => [{<<"chat-username">>,longstr,<<"lajos">>},{<<"timestamp_in_ms">>,long,1626956934520}],message_id => undefined,persistent => false,priority => undefined,redelivered => true,reply_to => undefined,routing_key => <<>>,timestamp => 1626956934,type => undefined,user_id => undefined}}
+** When Server state == #{channel => #{'__struct__' => 'Elixir.AMQP.Channel',conn => #{'__struct__' => 'Elixir.AMQP.Connection',pid => <0.315.0>},custom_consumer => {'Elixir.AMQP.SelectiveConsumer',<0.312.0>},pid => <0.324.0>},connection => #{'__struct__' => 'Elixir.AMQP.Connection',pid => <0.315.0>}}
+** Reason for termination ==
+** {'function not exported',[{lists,keyfind,[<<"chat-username">>,<<"1">>],[]},{'Elixir.ChatExampleElixir.Rabbit',extract_header,3,[{file,"lib/chat_example_elixir/Rabbit.ex"},{line,40}]},{'Elixir.ChatExampleElixir.Reader',handle_info,2,[{file,"lib/chat_example_elixir/Reader.ex"},{line,49}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,680}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,756}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+2021-07-22 14:32:53 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.ChatExampleElixir.Reader:init/1
+    pid: <0.312.0>
+    registered_name: 'Elixir.ChatExampleElixir.Reader'
+    exception error: {undef,[{lists,keyfind,[<<"chat-username">>,<<"1">>],[]},{'Elixir.ChatExampleElixir.Rabbit',extract_header,3,[{file,"lib/chat_example_elixir/Rabbit.ex"},{line,40}]},{'Elixir.ChatExampleElixir.Reader',handle_info,2,[{file,"lib/chat_example_elixir/Reader.ex"},{line,49}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,680}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,756}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: ['Elixir.ChatExampleElixir.Sup',<0.294.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.295.0>]
+    dictionary: [{gen_server_call_timeout,60000}]
+    trap_exit: false
+    status: running
+    heap_size: 2586
+    stack_size: 28
+    reductions: 9911
+  neighbours:
+2021-07-22 14:32:53 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.ChatExampleElixir.Sup'}
+     Context:    child_terminated
+     Reason:     {undef,[{lists,keyfind,[<<"chat-username">>,<<"1">>],[]},{'Elixir.ChatExampleElixir.Rabbit',extract_header,3,[{file,"lib/chat_example_elixir/Rabbit.ex"},{line,40}]},{'Elixir.ChatExampleElixir.Reader',handle_info,2,[{file,"lib/chat_example_elixir/Reader.ex"},{line,49}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,680}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,756}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+     Offender:   [{pid,<0.312.0>},{id,'Elixir.ChatExampleElixir.Reader'},{mfargs,{'Elixir.ChatExampleElixir.Reader',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
