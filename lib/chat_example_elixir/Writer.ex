@@ -23,10 +23,8 @@ defmodule ChatExampleElixir.Writer do
 
     # TODO: Declare the "common-room", use `Rabbit.common_exchange` as a name
     # It should be a :fanout type exchange
-    Exchange.declare(channel, Rabbit.common_exchange, :fanout)
 
     # TODO: Turn on publish confirms for this channel
-    Confirm.select(channel)
 
 
     {:ok, %{
@@ -51,9 +49,9 @@ defmodule ChatExampleElixir.Writer do
 
     # TODO Publish a message to `Rabbit.common_exchange`
     # Dont forget to include the headers
-    Basic.publish(channel, Rabbit.common_exchange,"", message, headers: headers)
+
+
     # TODO: Wait for publish confirms
-    Confirm.wait_for_confirms(channel)
 
 
     {:reply, :ok, state}

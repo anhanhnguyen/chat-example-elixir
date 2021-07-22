@@ -13,31 +13,31 @@ defmodule ChatExampleElixir.Reader do
     # TODO: 1. Implement `Rabbit.connect`
     {:ok, connection} = Rabbit.connect()
     # TODO: 2. Open a channel
-    {:ok, channel} = Channel.open(connection)
+    {:ok, channel} = {:ok, nil}
     # We need to monitor the channel
     Process.monitor(channel.pid)
 
     # TODO: Declare the "common-room", use `Rabbit.common_exchange` as a name
     # It should be a :fanout type exchange
-    Exchange.declare(channel, Rabbit.common_exchange, :fanout)
+
 
     # TODO: Set prefetch count
     # NOTE: It should be not "global" acknowledgments
-    Basic.qos(channel, prefetch_count: 100, global: false)
+
 
     # TODO: Declare queues
     # Use the `Rabbit.my_common_queue` method to get the queuename
     # Declare your queue with a queue expiry, either with policies or queue arguments
-    Queue.declare(channel, Rabbit.my_common_queue, durable: true)
+
 
     # TODO: Bind the common exchange and your queue
     # Remember the common exchange is a fanout type
 
-    Queue.bind(channel, Rabbit.my_common_queue, Rabbit.common_exchange)
+
 
     # TODO: Consume from the queue
 
-    Basic.consume(channel, Rabbit.my_common_queue)
+
 
     {:ok, %{
       connection: connection,
@@ -51,7 +51,8 @@ defmodule ChatExampleElixir.Reader do
     exchange = meta.exchange
     sender = Rabbit.extract_header(meta.headers, "chat-username", "UNDEFINED")
     Logger.info("[#{exchange}][#{sender}] #{payload}")
-    Basic.ack(state.channel, delivery_tag)
+    # TODO Acknowledge the message
+
     {:noreply, state}
   end
 
