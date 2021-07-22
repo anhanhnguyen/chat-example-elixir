@@ -521,3 +521,26 @@
      Reason:     {undef,[{lists,keyfind,[<<"chat-username">>,<<"1">>],[]},{'Elixir.ChatExampleElixir.Rabbit',extract_header,3,[{file,"lib/chat_example_elixir/Rabbit.ex"},{line,40}]},{'Elixir.ChatExampleElixir.Reader',handle_info,2,[{file,"lib/chat_example_elixir/Reader.ex"},{line,49}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,680}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,756}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
      Offender:   [{pid,<0.312.0>},{id,'Elixir.ChatExampleElixir.Reader'},{mfargs,{'Elixir.ChatExampleElixir.Reader',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
 
+2021-07-22 14:41:02 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.ChatExampleElixir.Sup'}
+     Context:    start_error
+     Reason:     {undef,[{nil,pid,[],[]},{'Elixir.ChatExampleElixir.Reader',init,1,[{file,"lib/chat_example_elixir/Reader.ex"},{line,18}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+     Offender:   [{pid,undefined},{id,'Elixir.ChatExampleElixir.Reader'},{mfargs,{'Elixir.ChatExampleElixir.Reader',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2021-07-22 14:41:02 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.293.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,'Elixir.ChatExampleElixir.Reader',{undef,[{nil,pid,[],[]},{'Elixir.ChatExampleElixir.Reader',init,1,[{file,"lib/chat_example_elixir/Reader.ex"},{line,18}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,417}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,385}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}}},{'Elixir.ChatExampleElixir',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.292.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.294.0>,normal}]
+    links: [<0.292.0>,<0.44.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 28
+    reductions: 223
+  neighbours:

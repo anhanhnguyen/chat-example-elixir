@@ -15,7 +15,8 @@ defmodule ChatExampleElixir.Reader do
     # TODO: 2. Open a channel
     {:ok, channel} = {:ok, nil}
     # We need to monitor the channel
-    Process.monitor(channel.pid)
+
+    # Process.monitor(channel.pid)
 
     # TODO: Declare the "common-room", use `Rabbit.common_exchange` as a name
     # It should be a :fanout type exchange
