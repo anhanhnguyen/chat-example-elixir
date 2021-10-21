@@ -5,7 +5,7 @@ defmodule ChatExampleElixir.Rabbit do
     # TODO
     # Implement a connection method to RabbitMQ
     # This is to make it easier to share the connection credentials
-    your_name = "lajos"
+    your_name = my_name()
     host = "localhost"
     user = "guest"
     password = "guest"

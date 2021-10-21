@@ -17,15 +17,18 @@ defmodule ChatExampleElixir.Writer do
     # TODO: 1. Implement `Rabbit.connect`
     {:ok, connection} = Rabbit.connect()
     # TODO: 2. Open a channel
-    {:ok, channel} = {:ok, nil}
-    # We need to monitor the channel
+    {:ok, channel} = Channel.open(connection)
 
-    #Process.monitor(channel.pid)
+    #  We need to monitor the channel
+    Process.monitor(channel.pid)
 
     # TODO: Declare the "common-room", use `Rabbit.common_exchange` as a name
     # It should be a :fanout type exchange
+    Exchange.fanout(channel, Rabbit.common_exchange())
 
     # TODO: Turn on publish confirms for this channel
+    Confirm.register_handler(channel, self())
+    Confirm.select(channel)
 
 
     {:ok, %{
@@ -50,7 +53,7 @@ defmodule ChatExampleElixir.Writer do
 
     # TODO Publish a message to `Rabbit.common_exchange`
     # Dont forget to include the headers
-
+    Basic.publish(channel, Rabbit.common_exchange(), "", message, headers: headers)
 
     # TODO: Wait for publish confirms
 
@@ -69,6 +72,21 @@ defmodule ChatExampleElixir.Writer do
   end
 
   @impl true
+  def handle_info({:basic_ack, tag, _multiple}, state) do
+    Logger.debug("Received basic ACK delivery_tag #{tag}")
+    {:noreply, state}
+  end
+
+  def handle_info({:DOWN, _ref, :process, _pid}, state) do
+    Logger.error("Channel #{state.channel} closed")
+    {:ok, channel} = Channel.open(state.connection)
+    Confirm.select(channel)
+    Process.monitor(channel.pid)
+
+    Logger.debug("Open a new channel: #{channel}")
+    {:noreply, Map.put(state, :channel, channel)}
+  end
+
   def handle_info(message, state) do
     # We'd need to handle reconnects here for example
     Logger.error("Received unhandled message")
