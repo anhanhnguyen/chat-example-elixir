@@ -12,6 +12,14 @@ defmodule ChatExampleElixir.Reader do
   def init(:ok) do
     # TODO: 1. Implement `Rabbit.connect`
     {:ok, connection} = Rabbit.connect()
+
+    {:ok, %{
+      connection: connection,
+      channel: init_channel(connection)
+    }}
+  end
+
+  def init_channel(connection) do
     # TODO: 2. Open a channel
     {:ok, channel} = Channel.open(connection)
 
@@ -21,6 +29,7 @@ defmodule ChatExampleElixir.Reader do
     # TODO: Declare the "common-room", use `Rabbit.common_exchange` as a name
     # It should be a :fanout type exchange
     Exchange.fanout(channel, Rabbit.common_exchange())
+    Exchange.direct(channel, Rabbit.private_exchange())
 
     # TODO: Set prefetch count
     #  NOTE: It should be not "global" acknowledgments
@@ -33,19 +42,22 @@ defmodule ChatExampleElixir.Reader do
       durable: true,
       arguments: ["x-queue-type": "quorum", "x-expires": 10 * 60 * 1000]
     )
+    Queue.declare(channel, Rabbit.my_private_queue(),
+      durable: true,
+      arguments: ["x-queue-type": "quorum", "x-expires": 60 * 1000]
+    )
 
 
     # TODO: Bind the common exchange and your queue
     # Remember the common exchange is a fanout type
     Queue.bind(channel, Rabbit.my_common_queue(), Rabbit.common_exchange())
+    Queue.bind(channel, Rabbit.my_private_queue(), Rabbit.private_exchange(), routing_key: Rabbit.my_name)
 
     # TODO: Consume from the queue
     Basic.consume(channel, Rabbit.my_common_queue())
+    Basic.consume(channel, Rabbit.my_private_queue())
 
-    {:ok, %{
-      connection: connection,
-      channel: channel
-    }}
+    channel
   end
 
   def handle_info({:basic_deliver, payload, meta}, state) do
@@ -66,12 +78,11 @@ defmodule ChatExampleElixir.Reader do
   end
 
   @impl true
-  def handle_info({:DOWN, _ref, :process, _pid}, state) do
-    Logger.error("Channel #{state.channel} closed")
-    {:ok, channel} = Channel.open(state.connection)
-    Basic.consume(channel, Rabbit.my_common_queue())
-    Logger.debug("Open a new channel: #{channel}")
-    Process.monitor(channel.pid)
+  def handle_info({:DOWN, _ref, :process, _pid, message}, state) do
+    Logger.error("Channel #{inspect(state.channel.pid)} closed: #{inspect(message)}")
+    channel = init_channel(state.connection)
+
+    Logger.debug("Open a new channel: #{inspect(channel.pid)}")
 
     {:noreply, Map.put(state, :channel, channel)}
   end

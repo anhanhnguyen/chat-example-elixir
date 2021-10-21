@@ -36,6 +36,20 @@ defmodule ChatExampleElixir.Rabbit do
     "#{my_name}-common-queue"
   end
 
+  def my_private_queue do
+    "#{my_name}-private-queue"
+  end
+
+  def private_queue(user) do
+    "#{user}-private-queue"
+  end
+
+  def chat_headers do
+    [
+      "chat-username": my_name()
+    ]
+  end
+
   def extract_header(headers, key, default) do
     case :lists.keyfind(key, 1, headers) do
       {key,longstr,value} -> value

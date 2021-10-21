@@ -16,6 +16,14 @@ defmodule ChatExampleElixir.Writer do
   def init(:ok) do
     # TODO: 1. Implement `Rabbit.connect`
     {:ok, connection} = Rabbit.connect()
+
+    {:ok, %{
+      connection: connection,
+      channel: init_channel(connection)
+    }}
+  end
+
+  def init_channel(connection) do
     # TODO: 2. Open a channel
     {:ok, channel} = Channel.open(connection)
 
@@ -25,22 +33,22 @@ defmodule ChatExampleElixir.Writer do
     # TODO: Declare the "common-room", use `Rabbit.common_exchange` as a name
     # It should be a :fanout type exchange
     Exchange.fanout(channel, Rabbit.common_exchange())
+    Exchange.direct(channel, Rabbit.private_exchange())
 
     # TODO: Turn on publish confirms for this channel
     Confirm.register_handler(channel, self())
     Confirm.select(channel)
 
-
-    {:ok, %{
-      connection: connection,
-      channel: channel
-    }}
+    channel
   end
 
   def write_common(message) do
     GenServer.call(ChatExampleElixir.Writer, {:write_common, message})
   end
 
+  def write_private(user, message) do
+    GenServer.call(__MODULE__, {:write_private, user, message})
+  end
 
   @impl true
   def handle_call({:write_common, message}, _from, %{
@@ -56,7 +64,13 @@ defmodule ChatExampleElixir.Writer do
     Basic.publish(channel, Rabbit.common_exchange(), "", message, headers: headers)
 
     # TODO: Wait for publish confirms
+    Confirm.wait_for_confirms(channel)
 
+    {:reply, :ok, state}
+  end
+
+  def handle_call({:write_private, user, message}, _from, %{channel: channel} = state) do
+    Basic.publish(channel, Rabbit.private_exchange(), user, message, headers: Rabbit.chat_headers(), mandatory: true)
 
     {:reply, :ok, state}
   end
@@ -77,13 +91,11 @@ defmodule ChatExampleElixir.Writer do
     {:noreply, state}
   end
 
-  def handle_info({:DOWN, _ref, :process, _pid}, state) do
-    Logger.error("Channel #{state.channel} closed")
-    {:ok, channel} = Channel.open(state.connection)
-    Confirm.select(channel)
-    Process.monitor(channel.pid)
+  def handle_info({:DOWN, _ref, :process, _pid, message}, state) do
+    Logger.error("Channel #{inspect(state.channel.pid)} closed: #{inspect(message)}")
+    channel = init_channel(state.connection)
 
-    Logger.debug("Open a new channel: #{channel}")
+    Logger.debug("Open a new channel: #{inspect(channel.pid)}")
     {:noreply, Map.put(state, :channel, channel)}
   end
 
