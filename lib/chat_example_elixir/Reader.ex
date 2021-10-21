@@ -38,14 +38,8 @@ defmodule ChatExampleElixir.Reader do
     # TODO: Declare queues
     # Use the `Rabbit.my_common_queue` method to get the queuename
     # Declare your queue with a queue expiry, either with policies or queue arguments
-    Queue.declare(channel, Rabbit.my_common_queue(),
-      durable: true,
-      arguments: ["x-queue-type": "quorum", "x-expires": 10 * 60 * 1000]
-    )
-    Queue.declare(channel, Rabbit.my_private_queue(),
-      durable: true,
-      arguments: ["x-queue-type": "quorum", "x-expires": 60 * 1000]
-    )
+    Queue.declare(channel, Rabbit.my_common_queue(), exclusive: true)
+    Queue.declare(channel, Rabbit.my_private_queue(), exclusive: true)
 
 
     # TODO: Bind the common exchange and your queue
